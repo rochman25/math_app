@@ -31,6 +31,63 @@ describe('A MathBasic', () => {
         expect(MathBasic.add(16, 8)).toEqual(24);
         expect(MathBasic.add(3, 7)).toEqual(10);
     });
+
+    it('should throw error when not given 2 parameters', () => {
+      expect(() => MathBasic.subtract()).toThrowError();
+      expect(() => MathBasic.subtract(2)).toThrowError();
+      expect(() => MathBasic.subtract(2, 1, 0)).toThrowError();
+      expect(() => MathBasic.subtract(3, 2, 1, 0)).toThrowError();
+    });
+
+    it('should throw error when given non-number parameters', () => {
+      expect(() => MathBasic.subtract('2','1')).toThrowError();
+      expect(() => MathBasic.subtract(true, {})).toThrowError();
+      expect(() => MathBasic.subtract(null, false)).toThrowError();
+    });
+
+    it('should return a - b when given two number parameters', () => {
+      expect(MathBasic.subtract(3,1)).toEqual(2);
+      expect(MathBasic.subtract(1,2)).toEqual(-1);
+      expect(MathBasic.subtract(2,0)).toEqual(2);
+    });
+
+    it('should throw error when not given 2 parameters', () => {
+      expect(() => MathBasic.multiply()).toThrowError();
+      expect(() => MathBasic.multiply(2)).toThrowError();
+      expect(() => MathBasic.multiply(2, 1, 0)).toThrowError();
+      expect(() => MathBasic.multiply(3, 2, 1, 0)).toThrowError();
+    });
+
+    it('should throw error when given non-number parameters', () => {
+      expect(() => MathBasic.multiply('2','1')).toThrowError();
+      expect(() => MathBasic.multiply(true, {})).toThrowError();
+      expect(() => MathBasic.multiply(null, false)).toThrowError();
+    });
+
+    it('should return a - b when given two number parameters', () => {
+      expect(MathBasic.multiply(3,1)).toEqual(3);
+      expect(MathBasic.multiply(1,2)).toEqual(2);
+      expect(MathBasic.multiply(2,0)).toEqual(0);
+    });
+
+    it('should throw error when not given 2 parameters', () => {
+      expect(() => MathBasic.divide()).toThrowError();
+      expect(() => MathBasic.divide(2)).toThrowError();
+      expect(() => MathBasic.divide(2, 1, 0)).toThrowError();
+      expect(() => MathBasic.divide(3, 2, 1, 0)).toThrowError();
+    });
+
+    it('should throw error when given non-number parameters', () => {
+      expect(() => MathBasic.divide('2','1')).toThrowError();
+      expect(() => MathBasic.divide(true, {})).toThrowError();
+      expect(() => MathBasic.divide(null, false)).toThrowError();
+    });
+
+    it('should return a - b when given two number parameters', () => {
+      expect(MathBasic.divide(3,1)).toEqual(3);
+      expect(MathBasic.divide(1,2)).toEqual(2);
+      expect(MathBasic.divide(2,0)).toEqual(0);
+    });
     
   });
 });
