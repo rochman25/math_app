@@ -31,7 +31,9 @@ describe('A MathBasic', () => {
         expect(MathBasic.add(16, 8)).toEqual(24);
         expect(MathBasic.add(3, 7)).toEqual(10);
     });
+  });
 
+  describe('A subtract function', () => {
     it('should throw error when not given 2 parameters', () => {
       expect(() => MathBasic.subtract()).toThrowError();
       expect(() => MathBasic.subtract(2)).toThrowError();
@@ -50,7 +52,9 @@ describe('A MathBasic', () => {
       expect(MathBasic.subtract(1,2)).toEqual(-1);
       expect(MathBasic.subtract(2,0)).toEqual(2);
     });
+  });
 
+  describe('A multiply function', () => {
     it('should throw error when not given 2 parameters', () => {
       expect(() => MathBasic.multiply()).toThrowError();
       expect(() => MathBasic.multiply(2)).toThrowError();
@@ -64,12 +68,14 @@ describe('A MathBasic', () => {
       expect(() => MathBasic.multiply(null, false)).toThrowError();
     });
 
-    it('should return a - b when given two number parameters', () => {
+    it('should return a * b when given two number parameters', () => {
       expect(MathBasic.multiply(3,1)).toEqual(3);
       expect(MathBasic.multiply(1,2)).toEqual(2);
       expect(MathBasic.multiply(2,0)).toEqual(0);
     });
-
+  });
+  
+  describe('A divide function', () => {
     it('should throw error when not given 2 parameters', () => {
       expect(() => MathBasic.divide()).toThrowError();
       expect(() => MathBasic.divide(2)).toThrowError();
